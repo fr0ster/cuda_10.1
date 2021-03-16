@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+  samples:
+    build: .
+    runtime: nvidia
+    #    command: /bin/bash
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    expose:
+    - "3999"
+    ports:
+    - "13999:3999"
